@@ -1,6 +1,9 @@
 # menuapp_python
 menu for selecting a video data to play
 </br>
+This application was developped on the raspberry pi 4.
+</br>
+
 WORK_DIR : /home/pi/Videos is assumed as WORKING_DIRECTORY</br>
 all of the following files should be putted on the WORKING_DITECTORY</br>
 excep for MENU which is the short cut(link) icon to be on the Desktop</br>
