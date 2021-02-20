@@ -15,7 +15,7 @@ excep for MENU which is the short cut(link) icon to be on the Desktop</br>
           4. according to the key event, </br> 
              set the file name of video to fname and</br> 
              run a subprocess of the shell show.sh with fname as its argument</br> 
-(4)menu.csv : contains menu items to display on the monitor and itsu video file name</br> 
+(4)menu.csv : contains menu items to display on the monitor and its video file name</br> 
           [message to display line, name of the corresponding video file]</br> 
           the extension part of the video file name have to be omitted.</br> 
 (5)show.sh : execute the application vlc with full screen option.</br> 
