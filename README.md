@@ -20,5 +20,7 @@ excep for MENU which is the short cut(link) icon to be on the Desktop</br>
           the extension part of the video file name have to be omitted.</br> 
 (5)show.sh : execute the application vlc with full screen option.</br> 
           the 1st argument of this shell is the name of the specific video</br> 
+(6)show_all : same as above show.sh</br>
+          10 video files' names have to be specified with fname</br>
 </br>
 video data files are putted on the "gg" directory , WORK_DIR/gg/xxxxxx.mp4
