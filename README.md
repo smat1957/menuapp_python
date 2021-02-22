@@ -10,7 +10,7 @@ excep for MENU which is the short cut(link) icon to be on the Desktop
 1. MENU : This is putted on the Desktop as an icon.  
           short cut(link) to the WORK_DIR/menu.sh  
 2. menu.sh : this executes the menu0.py with python3  
-3. menu0.py : source program of main procedure written by the python   
+3. menu.py : source program of main procedure written by the python   
           (1) read menu items from menu.csv  
           (2) display the menu items on a monitor (pygame)   
           (3) get a key board event (pygame.locals)  
@@ -32,13 +32,13 @@ video data files are putted on the "gg" directory , WORK_DIR/gg/xxxxxx.mp4
 additional functions as follows  
 
 1. when the machine power to be on, wake up this application automatically  
-    mkdir -p ~/.config/lxsession/LXDE-pi  
-    cp /etc/xdg/lxsession/LXDE-pi/autostart ~/.config/lxsession/LXDE-pi/    
-    echo '/home/pi/Videos/menu.sh' >> ~/.config/lxsession/LXDE-pi/autostart  
+    mkdir &emsp;　-p &emsp;　~/.config/lxsession/LXDE-pi  
+    cp /etc/xdg/lxsession/LXDE-pi/autostart &emsp;　~/.config/lxsession/LXDE-pi/    
+    echo '/home/pi/Videos/menu.sh' &emsp;　>>　&emsp; ~/.config/lxsession/LXDE-pi/autostart  
 
 2. after this application wakes up, 9 hours(=540 minites) later,  
    automated the normal shutdown will be functioning  
-  
+
      the first step of the python program 'menu.py',  
              .....  
          os.system("sudo shutdown -h " + "+540")  
