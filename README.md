@@ -32,9 +32,9 @@ video data files are putted on the "gg" directory , WORK_DIR/gg/xxxxxx.mp4
 additional functions as follows  
 
 1. when the machine power to be on, wake up this application automatically  
-    mkdir &emsp;　-p &emsp;　~/.config/lxsession/LXDE-pi  
-    cp /etc/xdg/lxsession/LXDE-pi/autostart &emsp;　~/.config/lxsession/LXDE-pi/    
-    echo '/home/pi/Videos/menu.sh' &emsp;　>>　&emsp; ~/.config/lxsession/LXDE-pi/autostart  
+    mkdir &ensp;　-p &ensp;　~/.config/lxsession/LXDE-pi  
+    cp /etc/xdg/lxsession/LXDE-pi/autostart &ensp;　~/.config/lxsession/LXDE-pi/    
+    echo '/home/pi/Videos/menu.sh' &ensp;　>>　&ensp; ~/.config/lxsession/LXDE-pi/autostart  
 
 2. after this application wakes up, 9 hours(=540 minites) later,  
    automated the normal shutdown will be functioning  
