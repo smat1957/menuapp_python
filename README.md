@@ -31,15 +31,15 @@ video data files are putted on the "gg" directory , WORK_DIR/gg/xxxxxx.mp4
 
 additional functions as follows  
 
-1. when the machine power to be on, wake up this application automatically  
+1. when the machine power is on, this application wakes up automatically  
     $ &nbsp; mkdir &nbsp; -p &nbsp; ~/.config/lxsession/LXDE-pi  
     $ &nbsp; cp &nbsp; /etc/xdg/lxsession/LXDE-pi/autostart &nbsp; ~/.config/lxsession/LXDE-pi/    
     $ &nbsp; echo &nbsp; '/home/pi/Videos/menu.sh' &nbsp; >> &nbsp; ~/.config/lxsession/LXDE-pi/autostart  
 
 2. after this application wakes up, 9 hours(=540 minites) later,  
-   automated the normal shutdown will be functioning  
+   nothing to do with human dealings, the normal shutdown will be occurred  
 
-     the first step of the python program 'menu.py',  
+     at the first step of the python program 'menu.py',  
              .....  
          os.system("sudo shutdown -h " + "+540")  
              .....  
