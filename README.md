@@ -38,8 +38,8 @@ additional functions as follows
 
 2. after this application wakes up, 9 hours(=540 minites) later,  
    automated the normal shutdown will be functioning  
-
-     if __name__ == '__main__':  
+  
+     the first step of the python program 'menu.py',  
              .....  
          os.system("sudo shutdown -h " + "+540")  
              .....  
