@@ -26,7 +26,7 @@ excep for MENU which is the short cut(link) icon to be on the Desktop
           10 video files' names have to be specified with fname  
 
 video data files are putted on the "gg" directory , WORK_DIR/gg/xxxxxx.mp4
-  
+
 =======================================  
 
 additional functions as follows  
@@ -43,3 +43,5 @@ additional functions as follows
              .....  
          os.system("sudo shutdown -h " + "+540")  
              .....  
+
+3. video data watching log will be stored for each selection  
