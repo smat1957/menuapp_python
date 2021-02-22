@@ -33,8 +33,8 @@ additional functions as follows
 
 1. when the machine power to be on, wake up this application automatically  
     mkdir &nbsp; -p &nbsp; ~/.config/lxsession/LXDE-pi  
-    cp /etc/xdg/lxsession/LXDE-pi/autostart &nbsp; ~/.config/lxsession/LXDE-pi/    
-    echo '/home/pi/Videos/menu.sh' &nbsp; >> &nbsp; ~/.config/lxsession/LXDE-pi/autostart  
+    cp &nbsp; /etc/xdg/lxsession/LXDE-pi/autostart &nbsp; ~/.config/lxsession/LXDE-pi/    
+    echo &nbsp; '/home/pi/Videos/menu.sh' &nbsp; >> &nbsp; ~/.config/lxsession/LXDE-pi/autostart  
 
 2. after this application wakes up, 9 hours(=540 minites) later,  
    automated the normal shutdown will be functioning  
