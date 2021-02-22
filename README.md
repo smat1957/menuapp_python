@@ -39,7 +39,7 @@ additional functions as follows
 2. after this application wakes up, 9 hours(=540 minites) later,  
    nothing to do with human dealings, the normal shutdown will be occurred  
 
-     at the first step of the python program 'menu.py',  
+     at the first step of the program 'menu.py',  
              .....  
          os.system("sudo shutdown -h " + "+540")  
              .....  
