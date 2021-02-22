@@ -9,7 +9,7 @@ excep for MENU which is the short cut(link) icon to be on the Desktop
 
 1. MENU : This is putted on the Desktop as an icon.  
           short cut(link) to the WORK_DIR/menu.sh  
-2. menu.sh : this shell executes the menu.py which is written in python  
+2. menu.sh : this shell executes the menu.py  
 3. menu.py : source program of main procedure written in python   
           (1) read menu items from menu.csv  
           (2) display the menu items on a monitor (pygame)   
@@ -22,7 +22,7 @@ excep for MENU which is the short cut(link) icon to be on the Desktop
           the extension part of the video file name have to be omitted.   
 5. show.sh : execute the application vlc with full screen option.  
           the 1st argument of this shell is the name of the specific video   
-6. show_all : same as the above shell show.sh  
+6. show_all.sh : same as the above shell show.sh  
           10 video files' names have to be specified with fname  
 
 video data files are putted on the "gg" directory , WORK_DIR/gg/xxxxxx.mp4
