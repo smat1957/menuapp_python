@@ -7,6 +7,15 @@ import subprocess
 from subprocess import PIPE
 import tkinter
 import random
+from datetime import datetime
+
+path_w = "/home/pi/Videos/"
+
+def shutdown(tstr="16:45"):
+    cmd0 = "sudo shutdown -c"
+    cmd1 = "sudo shutdown -h "+tstr
+    os.system(cmd0)
+    os.system(cmd1)
 
 def fine():
     pygame.quit()
@@ -22,24 +31,34 @@ def key_event(mn):
                 #pygame.display.toggle_fullscreen()
                 return
             elif event.key == K_0:
+                logkey='1'
                 fname = mn[9][1]
             elif event.key == K_1:
+                logkey='2'
                 fname = mn[0][1]
             elif event.key == K_2:
+                logkey='3'
                 fname = mn[1][1]
             elif event.key == K_3:
+                logkey='4'
                 fname = mn[2][1]
             elif event.key == K_4:
+                logkey='5'
                 fname = mn[3][1]
             elif event.key == K_5:
+                logkey='6'
                 fname = mn[4][1]
             elif event.key == K_6:
+                logkey='7'
                 fname = mn[5][1]
             elif event.key == K_7:
+                logkey='8'
                 fname = mn[6][1]
             elif event.key == K_8:
+                logkey='9'
                 fname = mn[7][1]
             elif event.key == K_9:
+                logkey='0'
                 fname = mn[8][1]
             
             elif event.key == K_a:
@@ -47,7 +66,8 @@ def key_event(mn):
                 fname = ' '
                 for n in rndmlist:
                     fname = fname + mn[n][1] + ' '
-                subprocess.run("/home/pi/Videos/show_all.sh " + fname,\
+                flog('A')
+                subprocess.run(path_w + "show_all.sh " + fname,\
                                shell=True, stdout=PIPE, stderr=PIPE, text=True)
                 return
             
@@ -55,17 +75,24 @@ def key_event(mn):
                 fine()
             else:
                 return
-            subprocess.run("/home/pi/Videos/show.sh " + fname,\
+            flog(logkey)
+            subprocess.run(path_w + "show.sh " + fname,\
                            shell=True, stdout=PIPE, stderr=PIPE, text=True)
         else:
             pass
 
 def finput():
-    with open('/home/pi/Videos/menu.csv', 'r', encoding='utf-8') as f:
+    with open(path_w + 'menu.csv', 'r', encoding='utf-8') as f:
         reader = csv.reader(f)
         l = [row for row in reader]
     return l
 
+def flog(item='_'):
+    fname = "log_"
+    dt_now = str(datetime.now())
+    with open(path_w+fname+item, mode='a') as f:
+        f.write(dt_now + '\n')
+        
 def gen_menu(items, HEIGHT):
     #print('debug=>',pygame.font.get_fonts())
     COLOR1 = (10,10,10)
@@ -92,6 +119,7 @@ def screen_pos(WIDTH, HEIGHT, xoff=0, yoff=0):
     os.environ['SDL_VIDEO_CENTERED'] = '0'
 
 if __name__ == '__main__':
+    shutdown('+480')
     pygame.init()
     WIDTH = 800
     HEIGHT = 600

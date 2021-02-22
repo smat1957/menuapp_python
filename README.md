@@ -26,3 +26,20 @@ excep for MENU which is the short cut(link) icon to be on the Desktop
           10 video files' names have to be specified with fname  
 
 video data files are putted on the "gg" directory , WORK_DIR/gg/xxxxxx.mp4
+  
+=======================================  
+
+additional functions as follows  
+
+1. when the machine power to be on, wake up this application automatically  
+    mkdir -p ~/.config/lxsession/LXDE-pi  
+    cp /etc/xdg/lxsession/LXDE-pi/autostart ~/.config/lxsession/LXDE-pi/    
+    echo '/home/pi/Videos/menu.sh' >> ~/.config/lxsession/LXDE-pi/autostart  
+
+2. after this application wakes up, 9 hours(=540 minites) later,  
+   automated the normal shutdown will be functioning  
+
+     if __name__ == '__main__':  
+             .....  
+         os.system("sudo shutdown -h " + "+540")  
+             .....  

@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 /home/pi/Videos/menu0.py
+python3 /home/pi/Videos/menu.py
