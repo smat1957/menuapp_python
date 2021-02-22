@@ -10,7 +10,7 @@ excep for MENU which is the short cut(link) icon to be on the Desktop
 1. MENU : This is putted on the Desktop as an icon.  
           short cut(link) to the WORK_DIR/menu.sh  
 2. menu.sh : this executes the menu0.py with python3  
-3. menu.py : source program of main procedure written by the python   
+3. menu.py : source program of main procedure written in python   
           (1) read menu items from menu.csv  
           (2) display the menu items on a monitor (pygame)   
           (3) get a key board event (pygame.locals)  
