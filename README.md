@@ -12,8 +12,8 @@ excep for MENU which is the short cut(link) icon to be on the Desktop
 2. menu.sh : this shell executes the menu.py  
 3. menu.py : source program of main procedure written in python   
           (1) read menu items from menu.csv  
-          (2) display the menu items on a monitor (pygame)   
-          (3) get a key board event (pygame.locals)  
+          (2) display the menu items on a monitor (tkinter)   
+          (3) get a key board event  
           (4) according to the key event,  
              set the file name of video to fname and   
              run a subprocess of the shell show.sh with fname as its argument   
