@@ -10,9 +10,10 @@ excep for MENU which is the short cut(link) icon to be on the Desktop
 1. MENU : This is putted on the Desktop as an icon.  
           short cut(link) to the WORK_DIR/menu.sh  
 2. menu.sh : this shell executes the menu.py  
-3. menu.py : source program of main procedure written in python   
+3. menu.py : main procedure written in python   
+          menu0.py(pygame), menu1.py(thinter)  
           (1) read menu items from menu.csv  
-          (2) display the menu items on a monitor (tkinter)   
+          (2) display the menu items on a monitor (pygame, tkinter)   
           (3) get a key board event  
           (4) according to the key event,  
              set the file name of video to fname and   

@@ -27,7 +27,7 @@ class Menu(Canvas):
             self.flog( str(n) )
             self.master.lower()
             self.master.attributes("-topmost", False)
-            subprocess.run( ['sh','./show00.sh',self.menu_items[n][1]] )
+            subprocess.run( ['sh','./show.sh',self.menu_items[n][1]] )
             self.master.lift()
             self.master.attributes("-topmost", True)
         elif ev.keysym in ['Q','q']:
