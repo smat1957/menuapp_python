@@ -1,8 +1,12 @@
+#!/usr/bin/env xdg-open
+
 [Desktop Entry]
 Version=1.0
+Encoding=UTF-8
 Type=Application
 Terminal=false
-Exec=/home/pi/Videos/menu.sh
-Name=MENU
-Comment=nothing
-Icon=/home/pi/Videos/none
+Exec=bash /home/pi/Videos/menu.sh
+Name[ja_JP]=MENU
+Comment[ja_JP]=
+Icon=
+Path=/home/pi/Videos

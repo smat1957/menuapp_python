@@ -26,8 +26,10 @@ class Menu(Canvas):
                 n=9
             self.flog( str(n) )
             self.master.lower()
+            self.master.attributes("-topmost", False)
             subprocess.run( ['sh','./show00.sh',self.menu_items[n][1]] )
             self.master.lift()
+            self.master.attributes("-topmost", True)
         elif ev.keysym in ['Q','q']:
             sys.exit()
         elif ev.keysym in ['A','a']:
@@ -37,9 +39,11 @@ class Menu(Canvas):
                 fname = fname + self.menu_items[n][1] + ' '
             self.flog('A')
             self.master.lower()
-            subprocess.run(["sh", "./show_all.sh " + fname],\
+            self.master.attributes("-topmost", False)
+            subprocess.run(["./show_all.sh " + fname],\
                                shell=True, stdout=PIPE, stderr=PIPE, text=True)
             self.master.lift()
+            self.master.attributes("-topmost", True)
     
     def menu_gen(self):
         for i, item in enumerate(self.menu_items):
@@ -74,12 +78,23 @@ def main():
     # メインウィンドウタイトル
     root.title("Menu")
     # メインウィンドウサイズ
-    root.geometry("800x600")
+    window_width = 800
+    window_height = 600
+    root.attributes('-fullscreen', True)
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    xoff = yoff = 0
+    pos_x = (screen_width - window_width)//2 + xoff
+    pos_y = (screen_height - window_height)//2 + yoff
+    #root.geometry("800x600")
+    root.geometry( str(window_width)+"x"+str(window_height)+\
+                   "+"+str(pos_x)+"+"+str(pos_y) )
+    root.attributes('-fullscreen', False)
     # メインウィンドウの最大化
     #root.attributes("-zoom", "1")
     #root.attributes("-fullscreen", True)
     # 常に最前面に表示
-    #root.attributes("-topmost", True)
+    root.attributes("-topmost", True)
     # メインウィンドウの背景色
     root.configure(bg="white")
     # Menu クラスのインスタンスを生成
