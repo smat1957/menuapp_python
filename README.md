@@ -1,5 +1,5 @@
 # menuapp_python
-select a video data from menu  
+To select a video data from menu  
 
 This application was developped on the raspberry pi 4.  
 
